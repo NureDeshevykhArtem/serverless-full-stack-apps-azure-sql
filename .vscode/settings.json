@@ -3,5 +3,12 @@
         "enable": true,
         "baseUri": "/api",
         "proxyUri": "http://localhost:7071/api"
-    }
+    },
+    "azureFunctions.projectSubpath": "azure-function\\node",
+    "azureFunctions.deploySubpath": "azure-function\\node",
+    "azureFunctions.postDeployTask": "npm install (functions)",
+    "azureFunctions.projectLanguage": "JavaScript",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.preDeployTask": "npm prune (functions)"
 }
