@@ -74,7 +74,7 @@
             const gid = params.get('gid');
             const apiUrl = `/api/bus-data?rid=${rid}&gid=${gid}`;
             $.getJSON(apiUrl, data => {
-                //console.log(data);
+                console.log(data);
                 plotWKT(data);                
             });
         }

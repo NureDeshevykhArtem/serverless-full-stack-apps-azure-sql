@@ -2,7 +2,7 @@ const sql = require('mssql')
 
 const AZURE_CONN_STRING = process.env["AzureSQLConnectionString"];
 
-module.exports = async function (context, req) {    
+module.exports = async function (context, req) {
     const pool = await sql.connect(AZURE_CONN_STRING);    
 
     const busData = await pool.request()
