@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_NAME: busazfunc # Имя вашего приложения
+  AZURE_FUNCTIONAPP_NAME: azbusapp # Имя вашего приложения
   AZURE_FUNCTIONAPP_PACKAGE_PATH: 'azure-function/node'   # Путь к вашему приложению
   NODE_VERSION: '16.x' # Версия Node.js
 

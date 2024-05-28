@@ -14,4 +14,3 @@ module.exports = async function (context, req) {
         body: JSON.parse(busData.recordset[0]["locationData"])
     };
 }
-
