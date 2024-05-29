@@ -19,12 +19,24 @@ module.exports = async function (context, req) {
 
         context.res = {
             status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*', // Разрешить запросы со всех источников
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+            },
             body: JSON.parse(busData.recordset[0]["locationData"])
         };
     } catch (error) {
         context.log.error('An error occurred:', error.message);
         context.res = {
             status: 500,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*', // Разрешить запросы со всех источников
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+            },
             body: 'An error occurred. Please try again later.'
         };
     }
