@@ -72,10 +72,10 @@
             const params = new URLSearchParams(location.search);
             const rid = params.get('rid');
             const gid = params.get('gid');
-            const apiUrl = `/api/HttpTrigger1?rid=${rid}&gid=${gid}`;
+            const apiUrl = `https://azbusapp.azurewebsites.net/api/HttpTrigger1?rid=${rid}&gid=${gid}`;
             $.getJSON(apiUrl, data => {
                 console.log(data);
-                plotWKT(data);                
+                plotWKT(data);           
             });
         }
 
